@@ -1,0 +1,8 @@
+build/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+*.log
+Research/browser-index.html
+Research/*-schema.json
+Research/*.xcresult/

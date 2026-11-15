@@ -1,0 +1,50 @@
+{
+  "app": "果剧",
+  "version": "1.0.0",
+  "bundleId": "com.jinjiazh.guoju.native",
+  "platform": "SwiftUI + AVPlayer, iOS 17+",
+  "verifiedAt": "2026-11-15",
+  "simulator": "iPhone 16 Pro, iOS 18.6",
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "episode2": {
+      "durationSeconds": 221.267,
+      "continuousPlaybackSeconds": 22.000076971,
+      "decodedVideoFrame": true,
+      "seekThenPlaybackSeconds": 95.000105582
+    },
+    "episode3": {
+      "durationSeconds": 217.867,
+      "continuousPlaybackSeconds": 18.000168308
+    },
+    "resumeFromSeconds": 93,
+    "automaticNextEpisode": 3,
+    "coverDecoded": true
+  },
+  "signing": {
+    "type": "Apple Development",
+    "expirationUTC": "2026-11-22T13:56:11Z",
+    "provisionedDeviceCount": 1
+  },
+  "ipa": {
+    "path": "output/Guoju-Native-iOS-1.0.0.ipa",
+    "bytes": 305951,
+    "sha256": "aa3b6a9ba9ad7dd9fb408fe6fd063bbe100d1845cb114c088eaff916bb048306"
+  },
+  "physicalDeviceInstalledAndLaunched": true,
+  "physicalDevicePlaybackTested": false,
+  "uiUpdate": {
+    "date": "2026-11-15",
+    "change": "Moved latest/original picker into compact navigation-bar menu",
+    "validation": "Simulator menu opens and changes selected category; simulator and device builds succeeded"
+  },
+  "fullscreenFix": {
+    "date": "2026-11-15",
+    "explicitEntry": true,
+    "presentation": "AVPlayerViewController modal fullScreen",
+    "pageDisappearanceDoesNotReleaseFullscreenPlayer": true,
+    "validation": "Neutral local video on iPhone 16 Pro / iOS 18.6 simulator: full-screen entry, landscape layout, system dismissal and preservation of playback position passed. Dismissal paused playback at the retained position.",
+    "fixtureIncludedInIPA": false
+  }
+}
