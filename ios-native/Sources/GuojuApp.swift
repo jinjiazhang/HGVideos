@@ -84,9 +84,10 @@ struct LibraryScreen: View {
             }
             .navigationDestination(for: Drama.self) { PlayerScreen(drama: $0, history: history, demo: demo) }
             .refreshable { await reload() }
-            .task(id: "\(kind.rawValue)|\(query)") { await reload() }
             .sheet(isPresented: $about) { AboutScreen() }
         }
+        // Keep the loaded pages and scroll view intact when popping the player.
+        .task(id: "\(kind.rawValue)|\(query)") { await reload() }
     }
     private func reload(reconnect: Bool = false) async { await model.reload(kind: kind, query: query, reconnect: reconnect) }
 }
